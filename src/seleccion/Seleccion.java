@@ -16,4 +16,21 @@ public class Seleccion {
 			arreglo[posMax] = aux;
 		}
 	}
+	
+	public static void seleccionMin(Integer[] arreglo) {
+		int posMin;
+		Integer aux;
+		for (int i = 0; i < arreglo.length-1; i++) {
+			posMin = i;
+			for (int j = i+1 ; j <= arreglo.length-1; j++) {
+				if (arreglo[j] < arreglo[posMin]) {
+					posMin = j;
+				}
+			}
+			//intercambio la posición de i con la posición del mínimo. 
+			aux = arreglo[i];
+			arreglo[i] = arreglo[posMin];
+			arreglo[posMin] = aux;
+		}
+	}
 }
